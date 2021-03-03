@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap');
 
-$darkslategray: #25262e;
-$black: #1f2129;
+@import '../styles/mixins', '../styles/base', '../styles/variables';
 
-body {
-    background-color: #f2f1f1;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
-    color: #f2f1f1;
+    color: $white;
+}
+
+body {
+    background-color: $white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
 
 #to-do-list {
@@ -24,32 +25,38 @@ body {
     height: 80vh;
     background-color: $darkslategray; // for browsers that do not support gradient
     background-image: linear-gradient(to bottom right, $black, $darkslategray);
-    border: 5px solid $darkslategray;
     border-radius: 30px;
     padding: 20px;
-    text-align: center;
 }
+
 ol {
     list-style: none;
 }
+
 li {
     margin: 10px 0px;
     padding: 20px 10px;
     width: 100%;
     background-color: $darkslategray;
-    box-shadow: 
+    box-shadow:
         12px 12px 16px 0 rgba(0, 0, 0, 0.25),
         -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
     border-radius: 20px;
+    text-align: center;
     &:hover {
         cursor: pointer;
-
+        box-shadow: none;
+        box-shadow:
+            12px 12px 16px 0 rgba(0, 0, 0, 0.25) inset,
+            -4px -4px 12px 0 rgba(71, 71, 71, 0.3) inset;
     }
 }
+
 #row {
     width: 100%;
     display: flex;
 }
+
 #input {
     padding: 10px 20px;
     border-radius: 10px;
@@ -57,12 +64,12 @@ li {
     color: #1f2129;
     display: flex;
     flex: 4;
-    font-weight: 600;
     letter-spacing: 1px;
     &:focus {
         outline: none;
     }
 }
+
 #cta-btn {
     display: flex;
     flex: 1;
@@ -70,9 +77,9 @@ li {
     align-items: center;
     margin-left: 10px;
     background-image: linear-gradient(to bottom right, #1eaa3e, #3ef076);
-    box-shadow: 
-    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-    -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
+    box-shadow:
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -80,10 +87,14 @@ li {
     text-transform: uppercase;
     &:hover {
         cursor: pointer;
-
+        box-shadow:
+            12px 12px 16px 0 rgba(62,240,118, 0.25) inset,
+            -4px -4px 12px 0 rgba(30,170,62, 0.3) inset;
     }
 }
-#input, #cta-btn {
+
+#input,
+#cta-btn {
     margin-bottom: 20px;
     margin-top: 20px;
 }

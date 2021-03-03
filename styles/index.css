@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #f2f1f1;
+}
+
 body {
   background-color: #f2f1f1;
   width: 100%;
@@ -12,15 +21,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
-  color: #f2f1f1;
+  font-weight: 600;
 }
 
 #to-do-list {
@@ -29,10 +30,8 @@ body {
   background-color: #25262e;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#1f2129), to(#25262e));
   background-image: linear-gradient(to bottom right, #1f2129, #25262e);
-  border: 5px solid #25262e;
   border-radius: 30px;
   padding: 20px;
-  text-align: center;
 }
 
 ol {
@@ -47,10 +46,15 @@ li {
   -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
           box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
   border-radius: 20px;
+  text-align: center;
 }
 
 li:hover {
   cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25) inset, -4px -4px 12px 0 rgba(71, 71, 71, 0.3) inset;
+          box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25) inset, -4px -4px 12px 0 rgba(71, 71, 71, 0.3) inset;
 }
 
 #row {
@@ -71,7 +75,6 @@ li:hover {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
-  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -106,9 +109,12 @@ li:hover {
 
 #cta-btn:hover {
   cursor: pointer;
+  -webkit-box-shadow: 12px 12px 16px 0 rgba(62, 240, 118, 0.25) inset, -4px -4px 12px 0 rgba(30, 170, 62, 0.3) inset;
+          box-shadow: 12px 12px 16px 0 rgba(62, 240, 118, 0.25) inset, -4px -4px 12px 0 rgba(30, 170, 62, 0.3) inset;
 }
 
-#input, #cta-btn {
+#input,
+#cta-btn {
   margin-bottom: 20px;
   margin-top: 20px;
 }

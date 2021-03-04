@@ -26,35 +26,55 @@ body {
 
 #to-do-list {
   width: 400px;
-  height: 80vh;
-  background-color: #25262e;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#1f2129), to(#25262e));
-  background-image: linear-gradient(to bottom right, #1f2129, #25262e);
-  border-radius: 30px;
+  height: 90vh;
+  background-color: #414141;
+  border-radius: 15px;
   padding: 20px;
+  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.75), -2px -2px 3px 1px rgba(193, 193, 193, 0.75);
+          box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.75), -2px -2px 3px 1px rgba(193, 193, 193, 0.75);
+}
+
+#to-do-list h1 {
+  margin-bottom: 20px;
 }
 
 ol {
   list-style: none;
+  overflow-y: scroll;
+  height: 60vh;
+}
+
+ol::-webkit-scrollbar-track {
+  background-color: #414141;
+  -webkit-box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+          box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+}
+
+ol::-webkit-scrollbar {
+  width: 10px;
+}
+
+ol::-webkit-scrollbar-thumb {
+  background-color: #777777;
 }
 
 li {
   margin: 10px 0px;
-  padding: 20px 10px;
-  width: 100%;
-  background-color: #25262e;
-  -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
-          box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
-  border-radius: 20px;
-  text-align: center;
+  width: 95%;
+  background-color: #414141;
+  -webkit-box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+          box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+  padding: 10px 20px;
+  font-weight: 800;
+  border-radius: 10px;
 }
 
 li:hover {
   cursor: pointer;
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25) inset, -4px -4px 12px 0 rgba(71, 71, 71, 0.3) inset;
-          box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25) inset, -4px -4px 12px 0 rgba(71, 71, 71, 0.3) inset;
+  -webkit-box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.25) inset, -3px -3px 2px 0 rgba(193, 193, 193, 0.1) inset;
+          box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.25) inset, -3px -3px 2px 0 rgba(193, 193, 193, 0.1) inset;
 }
 
 #row {
@@ -65,17 +85,20 @@ li:hover {
 }
 
 #input {
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  color: #1f2129;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
+  border: none;
   letter-spacing: 1px;
+  -webkit-box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+          box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+  padding: 10px 20px;
+  font-weight: 800;
+  border-radius: 10px;
+  background-color: #414141;
 }
 
 #input:focus {
@@ -98,19 +121,23 @@ li:hover {
   margin-left: 10px;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#1eaa3e), to(#3ef076));
   background-image: linear-gradient(to bottom right, #1eaa3e, #3ef076);
-  -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
-          box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -4px -4px 12px 0 rgba(71, 71, 71, 0.3);
+  -webkit-box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
+          box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3), -2px -3px 2px 0 rgba(193, 193, 193, 0.1);
   padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
   font-weight: 800;
+  border-radius: 10px;
+  border: none;
   text-transform: uppercase;
 }
 
 #cta-btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 12px 12px 16px 0 rgba(62, 240, 118, 0.25) inset, -4px -4px 12px 0 rgba(30, 170, 62, 0.3) inset;
-          box-shadow: 12px 12px 16px 0 rgba(62, 240, 118, 0.25) inset, -4px -4px 12px 0 rgba(30, 170, 62, 0.3) inset;
+  -webkit-box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.25) inset, -3px -3px 2px 0 rgba(193, 193, 193, 0.1) inset;
+          box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.25) inset, -3px -3px 2px 0 rgba(193, 193, 193, 0.1) inset;
+}
+
+#cta-btn:focus {
+  outline: none;
 }
 
 #input,

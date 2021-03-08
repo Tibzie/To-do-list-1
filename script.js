@@ -16,7 +16,7 @@ let taskCount = document.getElementById("task-count");
 //     input.value = "";
 // });
 
-btn.addEventListener("click", (item, remove, edit) => {
+btn.addEventListener("click", (item) => {
     item = document.createElement("li");
     item.innerHTML = input.value;
     list.appendChild(item);
@@ -25,3 +25,4 @@ btn.addEventListener("click", (item, remove, edit) => {
     });
     input.value = "";
 });
+

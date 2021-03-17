@@ -1,9 +1,9 @@
 let input = document.getElementById("input");
-let btn = document.getElementById("cta-btn");
+let addBtn = document.getElementById("cta-btn");
 let list = document.getElementById("list");
 let taskCount = document.getElementById("task-count");
 
-btn.addEventListener("click", (item) => {
+addBtn.addEventListener("click", (item) => {
     item = document.createElement("li");
     item.innerHTML = input.value;
     list.appendChild(item);

@@ -34,6 +34,7 @@ li {
     margin: 10px 0px;
     width: 95%;
     background-color: $dark-grey;
+    word-break: break-all;
     @include box-shadow();
     @include general-rules();
     &:hover {

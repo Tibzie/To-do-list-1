@@ -37,8 +37,8 @@ li {
     word-break: break-all;
     @include box-shadow();
     @include general-rules();
+    cursor: pointer;
     &:hover {
-        cursor: pointer;
         box-shadow: none;
         @include box-shadow-inset();
     }
@@ -55,8 +55,9 @@ li {
     @include box-shadow();
     @include general-rules();
     background-color: $dark-grey;
-    &:focus {
+    &:focus, &:hover {
         outline: none;
+        @include box-shadow-inset();
     }
 }
 #cta-btn {
@@ -70,13 +71,12 @@ li {
     @include general-rules();
     border: none;
     text-transform: uppercase;
-    &:hover {
-        cursor: pointer;
+    cursor: pointer;
+    &:focus, &:hover {
+        outline: none;
         @include box-shadow-inset();
     }
-    &:focus {
-        outline: none;
-    }
+
 }
 #input,
 #cta-btn {
